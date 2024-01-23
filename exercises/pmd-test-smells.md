@@ -15,7 +15,11 @@ Include the improved test code in this file.
 
 ## Answer
 
-## TODO partie 1
+Les smells vus en cours implémentées dans les règles pmd de `pmd-documentation` sont :
+- Eager Test -> JUnitTestContainsTooManyAsserts
+- Assertion Roulette -> JUnitTestContainsTooManyAsserts && JUnitTestsShouldIncludeMessage
+- The Free Ride -> JUnitTestContainsTooManyAsserts
+- Interacting Test -> JUnit4TestShouldUseBeforeAnnotation && JUnit4TestShouldUseAfterAnnotation
 
 On exécute pmd sur Apache Commons Collections avec la règle `UseAssertTrueInsteadOfAssertEquals`.
 Il est préférable d'utiliser `assertTrue` et `assertFalse` plutôt que d'utiliser `assertEquals` avec un booléen déterminé. Ces méthodes sont optimisées pour ces comparaisons et permettent une meilleur lisibilité du code.  
