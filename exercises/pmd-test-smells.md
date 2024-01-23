@@ -17,7 +17,9 @@ Include the improved test code in this file.
 
 ## TODO partie 1
 
-On exécute pmd sur Apache Commons Collections avec la règle `UseAssertTrueInsteadOfAssertEquals`. On obtient le résultat suivant :
+On exécute pmd sur Apache Commons Collections avec la règle `UseAssertTrueInsteadOfAssertEquals`.
+Il est préférable d'utiliser `assertTrue` et `assertFalse` plutôt que d'utiliser `assertEquals` avec un booléen déterminé. Ces méthodes sont optimisées pour ces comparaisons et permettent une meilleur lisibilité du code.  
+On obtient le résultat suivant :
 ```bat
 C:\Users\maxim\Desktop\commons-collections-master>pmd -d ./src -R category/java/bestpractices.xml/UseAssertTrueInsteadOfAssertEquals -f text
 janv. 23, 2024 1:21:10 PM net.sourceforge.pmd.PMD encourageToUseIncrementalAnalysis
