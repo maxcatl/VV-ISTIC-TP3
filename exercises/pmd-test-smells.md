@@ -15,3 +15,19 @@ Include the improved test code in this file.
 
 ## Answer
 
+## TODO partie 1
+
+On exécute pmd sur Apache Commons Collections avec la règle `UseAssertTrueInsteadOfAssertEquals`. J'obtiens le résultat suivant.
+## TODO rajouter image
+
+
+On choisie le premier smell et on remplace ensuite la méthode `assertEquals(false)` par `assertFalse`:
+
+test présent dans le package collections d'Apache :
+## TODO ajouter image test avant changement
+
+test modifié pour que le smell n'apparaisse plus :
+## TODO ajouter image test après changement
+
+Résultats pmd après changement du test (le premier smell (ligne 191) n'apparait plus) :
+## TODO rajouter image pmd après changement
