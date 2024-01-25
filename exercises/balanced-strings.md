@@ -43,9 +43,10 @@ Testez avec un mélange de divers symboles, y compris des symboles de regroupeme
 Incluez des cas où ces symboles sont correctement ou incorrectement imbriqués.
 
 2. Les cas de tests de l'étape précédente couvrent 100% de la méthode. Nous n'avons donc pas eu besoin de rajouter d'autres tests
+
 ![](images/coverage.png)
 
-3. On teste cette condition pour satisfaire le base choice coverage. 
+4. On teste cette condition pour satisfaire le base choice coverage. 
 ```java
 return (openSymbol == '(' && closeSymbol == ')') ||
         (openSymbol == '[' && closeSymbol == ']') ||
@@ -85,15 +86,15 @@ Condition 3 : (openSymbol == '{' && closeSymbol == '}')
 
 4. Résultat des tests de mutation avec Pitest :
 
-![pitest results](pitest.png)
+![pitest results](images/pitest.png)
 
 On obtient une couverture de mutation et une force de test 100% avec nos tests initiaux, aucun changement n'est nécessaire. La couverture par ligne n'est pas à 100%, mais la ligne manquante correspond au constructeur vide :
 
-![Alt text](<pitest constructeur.png>)
+![Alt text](<images/pitest constructeur.png>)
 
 Voici la liste des mutants réalisés par Pitest :
 
-![Alt text](<pitest mutants réalisés.png>)
+![Alt text](<images/pitest mutants réalisés.png>)
 
 On peut voir notamment qu'à la ligne 14, pitest a essayé d'inverser chaque partie de la condition et qu'à chaque fois un des test a échoué.  
 Ensuite ligne 15, Pitest a enlever l'appel à push et qu'un des test a échoué.  
