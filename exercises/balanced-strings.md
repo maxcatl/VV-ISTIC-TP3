@@ -46,7 +46,7 @@ Incluez des cas où ces symboles sont correctement ou incorrectement imbriqués.
 
 ![](images/coverage.png)
 
-4. On teste cette condition pour satisfaire le base choice coverage. 
+3. On teste cette condition pour satisfaire le base choice coverage. 
 ```java
 return (openSymbol == '(' && closeSymbol == ')') ||
         (openSymbol == '[' && closeSymbol == ']') ||
